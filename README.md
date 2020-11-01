@@ -6,7 +6,7 @@ https://github.com/udacity/self-driving-car-sim
 To test this model, clone this repo and use a virtual env(like venv or conda environment)\
 Install necessary modules by running:
 `pip install -requirements.txt`\
-or\ 
+or 
 `conda install --file requirements.txt` \
 Run the sim_connect.py (Basic Flask, Socketio WSGL)
 Run the simulator and choose autonomous mode\
