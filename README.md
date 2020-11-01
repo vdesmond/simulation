@@ -4,7 +4,7 @@ A deep learning model created with Tensorflow and Keras + OpenCV to traverse the
 https://github.com/udacity/self-driving-car-sim
 
 To test this model, clone this repo and use a virtual env(like venv or conda environment)\
-Install necessary modules by running 'pip install -requirements.txt' or 'conda insatll --file requirements.txt' R\
+Install necessary modules by running `pip install -requirements.txt` or `conda install --file requirements.txt` R\
 Run the sim_connect.py (Basic Flask, Socketio WSGL)
 Run the simulator and choose autonomous mode\
 [nvidia_model](https://github.com/Vignesh-Desmond/simulation/blob/master/nvidia_model.py) is the src file for nvidia_model
