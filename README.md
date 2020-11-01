@@ -1,5 +1,4 @@
-## Simulation
-
+# Simulation
 
 A deep learning model created with Tensorflow and Keras + OpenCV to traverse the autonomous track used by Udacity Self-Driving Car Simulator\
 https://github.com/udacity/self-driving-car-sim
@@ -10,10 +9,8 @@ Run the sim_connect.py (Basic Flask, Socketio WSGL)\
 Run the simulator and choose autonomous mode.
 [nvidia_model](https://github.com/Vignesh-Desmond/simulation/blob/master/nvidia_model.py) is the src file for nvidia_model\
 
+## Note:
 Sample IMG and driving_log files are also uploaded\
-
-# Note:
-nvidia_model src file requires 'imgaug' for preprocessing. Use 'pip install imgaug' before compiling\
 
 Also added:
 1. [traffic_signs_classifier](https://github.com/Vignesh-Desmond/simulation/blob/master/traffic_signs_classifier.py) for road sign classification
