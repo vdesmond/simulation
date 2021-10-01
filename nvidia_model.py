@@ -44,10 +44,13 @@ plt.plot(
 
 remove_list = []
 for j in range(num_bins):
-    list1 = []
-    for i in range(len(data["steering"])):
-        if data["steering"][i] >= bins[j] and data["steering"][i] <= bins[j + 1]:
-            list1.append(i)
+    list1 = [
+        i
+        for i in range(len(data["steering"]))
+        if data["steering"][i] >= bins[j]
+        and data["steering"][i] <= bins[j + 1]
+    ]
+
     shuffle(list1)
     list1 = list1[samples_per_bin:]
     remove_list.extend(list1)
@@ -224,7 +227,7 @@ def batch_generator(image_paths, steering_ang, batch_size, istraining):
         batch_img = []
         batch_steering = []
 
-        for i in range(batch_size):
+        for _ in range(batch_size):
             random_index = random.randint(0, len(image_paths) - 1)
 
             if istraining:

@@ -28,7 +28,7 @@ def average_slope_intercept(image, lines):
             left_fit.append((slope, intercept))
         else:
             right_fit.append((slope, intercept))
-    if len(left_fit) == 0:
+    if not left_fit:
         left_fit_average = global_left_fit_average
     else:
         left_fit_average = np.average(left_fit, axis=0)
@@ -44,8 +44,7 @@ def average_slope_intercept(image, lines):
 def canny(image):
     gray = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
     blur = cv2.GaussianBlur(gray, (5, 5), 0)
-    canny = cv2.Canny(blur, 50, 100)
-    return canny
+    return cv2.Canny(blur, 50, 100)
 
 
 def display_lines(image, lines):
@@ -61,8 +60,7 @@ def region_of_interest(image):
     polygons = np.array([[(200, height), (1100, height), (550, 250)]])
     mask = np.zeros_like(image)
     cv2.fillPoly(mask, polygons, 255)
-    masked_image = cv2.bitwise_and(image, mask)
-    return masked_image
+    return cv2.bitwise_and(image, mask)
 
 
 fourcc = cv2.VideoWriter_fourcc(*"XVID")

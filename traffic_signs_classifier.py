@@ -85,7 +85,7 @@ for i in range(cols):
 print(num_of_samples)
 
 plt.figure(figsize=(12, 4))
-plt.bar(range(0, num_classes), num_of_samples)
+plt.bar(range(num_classes), num_of_samples)
 plt.title("Distribution of the training dataset")
 plt.xlabel("Class number")
 plt.ylabel("Number of images")
